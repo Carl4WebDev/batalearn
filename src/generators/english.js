@@ -352,6 +352,10 @@ const spellingData = {
 }
 
 // Alphabet Generator
+function maskFirstLetter(word) {
+  return '_' + word.slice(1)
+}
+
 // Words for "what letter does this start/end with" questions
 const alphabetWords = {
   easy: [
@@ -416,83 +420,17 @@ const alphabetWords = {
 }
 
 export function generateAlphabet(difficulty, lang) {
-  const questionType = Math.random()
+  const data = alphabetWords[difficulty] || alphabetWords.easy
+  const item = randItem(data)
+  const masked = maskFirstLetter(item.word)
 
-  let questionText, questionSpeech, correct, wrongs, dedupeKey
+  const correct = item.letter
+  const wrongs = shuffle(alphabet.filter(l => l !== item.letter)).slice(0, 3)
 
-  if (difficulty === 'easy') {
-    if (questionType < 0.5) {
-      // What comes after X?
-      const idx = Math.floor(Math.random() * 26)
-      const letter = alphabet[idx]
-      const nextLetter = idx < 25 ? alphabet[idx + 1] : 'A'
-      correct = nextLetter
-      wrongs = shuffle(alphabet.filter(l => l !== nextLetter)).slice(0, 3)
-      questionText = lang === 'fil'
-        ? `Ano ang kasunod ng ${letter}?`
-        : `What comes after ${letter}?`
-      questionSpeech = questionText
-      dedupeKey = `alpha-after-${letter}`
-    } else {
-      // What letter does [word] start with?
-      const item = randItem(alphabetWords.easy)
-      correct = item.letter
-      wrongs = shuffle(alphabet.filter(l => l !== item.letter)).slice(0, 3)
-      questionText = lang === 'fil'
-        ? `Anong letra ang nagsisimula ang salitang "${item.word}"?`
-        : `What letter does "${item.word}" start with?`
-      questionSpeech = questionText
-      dedupeKey = `alpha-start-${item.word}`
-    }
-  } else if (difficulty === 'medium') {
-    if (questionType < 0.5) {
-      // What comes before X?
-      const idx = Math.floor(Math.random() * 26)
-      const letter = alphabet[idx]
-      const prevLetter = idx > 0 ? alphabet[idx - 1] : 'Z'
-      correct = prevLetter
-      wrongs = shuffle(alphabet.filter(l => l !== prevLetter)).slice(0, 3)
-      questionText = lang === 'fil'
-        ? `Ano ang bago ng ${letter}?`
-        : `What comes before ${letter}?`
-      questionSpeech = questionText
-      dedupeKey = `alpha-before-${letter}`
-    } else {
-      // What letter does [word] start with?
-      const item = randItem(alphabetWords.medium)
-      correct = item.letter
-      wrongs = shuffle(alphabet.filter(l => l !== item.letter)).slice(0, 3)
-      questionText = lang === 'fil'
-        ? `Anong letra ang nagsisimula ang salitang "${item.word}"?`
-        : `What letter does "${item.word}" start with?`
-      questionSpeech = questionText
-      dedupeKey = `alpha-start-${item.word}`
-    }
-  } else {
-    if (questionType < 0.5) {
-      // What is the Xth letter?
-      const idx = Math.floor(Math.random() * 26)
-      const letter = alphabet[idx]
-      correct = letter
-      wrongs = shuffle(alphabet.filter(l => l !== letter)).slice(0, 3)
-      const ordinal = idx + 1
-      questionText = lang === 'fil'
-        ? `Ano ang ika-${ordinal} na letra?`
-        : `What is the ${ordinal}${ordinal === 1 ? 'st' : ordinal === 2 ? 'nd' : ordinal === 3 ? 'rd' : 'th'} letter of the alphabet?`
-      questionSpeech = questionText
-      dedupeKey = `alpha-ordinal-${ordinal}`
-    } else {
-      // What letter does [word] start with?
-      const item = randItem(alphabetWords.hard)
-      correct = item.letter
-      wrongs = shuffle(alphabet.filter(l => l !== item.letter)).slice(0, 3)
-      questionText = lang === 'fil'
-        ? `Anong letra ang nagsisimula ang salitang "${item.word}"?`
-        : `What letter does "${item.word}" start with?`
-      questionSpeech = questionText
-      dedupeKey = `alpha-start-${item.word}`
-    }
-  }
+  const questionText = lang === 'fil'
+    ? `Anong letra ang nagsisimula ang salitang "${masked}"?`
+    : `What letter does "${masked}" start with?`
+  const questionSpeech = questionText
 
   const labels = ['A', 'B', 'C', 'D']
   const options = shuffle([correct, ...wrongs])
@@ -501,7 +439,7 @@ export function generateAlphabet(difficulty, lang) {
     id: `alpha-${Date.now()}-${Math.random()}`,
     text: questionText,
     speech: questionSpeech,
-    dedupeKey,
+    dedupeKey: `alpha-${item.word}`,
     choices: options.map((opt, i) => ({
       label: labels[i],
       text: opt,
