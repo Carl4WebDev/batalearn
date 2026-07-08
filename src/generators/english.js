@@ -14,7 +14,7 @@ function randItem(arr) {
 // Alphabet data
 const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
 
-// Vocabulary data
+// Vocabulary data - 50+ easy, 50+ medium, 50+ hard
 const vocabularyData = {
   easy: [
     { word: 'cat', definition: 'A small furry pet that says meow', emoji: '🐱' },
@@ -32,6 +32,42 @@ const vocabularyData = {
     { word: 'rain', definition: 'Water that falls from clouds', emoji: '🌧️' },
     { word: 'cake', definition: 'A sweet treat for birthdays', emoji: '🎂' },
     { word: 'ship', definition: 'A big boat on the ocean', emoji: '🚢' },
+    { word: 'house', definition: 'A place where people live', emoji: '🏠' },
+    { word: 'car', definition: 'A vehicle with four wheels', emoji: '🚗' },
+    { word: 'bus', definition: 'A big vehicle that carries many people', emoji: '🚌' },
+    { word: 'bed', definition: 'You sleep on it', emoji: '🛏️' },
+    { word: 'door', definition: 'You open it to go inside', emoji: '🚪' },
+    { word: 'key', definition: 'You use it to unlock a door', emoji: '🔑' },
+    { word: 'bell', definition: 'It makes a ringing sound', emoji: '🔔' },
+    { word: 'clock', definition: 'It tells you the time', emoji: '🕐' },
+    { word: 'lamp', definition: 'It gives light at night', emoji: '💡' },
+    { word: 'ring', definition: 'You wear it on your finger', emoji: '💍' },
+    { word: 'coin', definition: 'A round piece of money', emoji: '🪙' },
+    { word: 'drum', definition: 'You hit it to make music', emoji: '🥁' },
+    { word: 'kite', definition: 'It flies in the wind', emoji: '🪁' },
+    { word: 'doll', definition: 'A toy that looks like a person', emoji: '🪆' },
+    { word: 'flag', definition: 'It represents a country', emoji: '🚩' },
+    { word: 'frog', definition: 'It hops and says ribbit', emoji: '🐸' },
+    { word: 'bear', definition: 'A big animal that lives in the forest', emoji: '🐻' },
+    { word: 'duck', definition: 'A bird that swims and says quack', emoji: '🦆' },
+    { word: 'hen', definition: 'A female chicken', emoji: '🐔' },
+    { word: 'pig', definition: 'A pink farm animal that says oink', emoji: '🐷' },
+    { word: 'cow', definition: 'A farm animal that gives milk', emoji: '🐄' },
+    { word: 'fox', definition: 'A clever animal with a bushy tail', emoji: '🦊' },
+    { word: 'owl', definition: 'A bird that is active at night', emoji: '🦉' },
+    { word: 'bee', definition: 'An insect that makes honey', emoji: '🐝' },
+    { word: 'ant', definition: 'A tiny insect that lives in colonies', emoji: '🐜' },
+    { word: 'nut', definition: 'A hard-shelled food', emoji: '🥜' },
+    { word: 'pea', definition: 'A small green vegetable', emoji: '🟢' },
+    { word: 'pie', definition: 'A baked dish with a crust', emoji: '🥧' },
+    { word: 'jam', definition: 'A sweet spread made from fruit', emoji: '🍓' },
+    { word: 'bow', definition: 'You use it to shoot arrows', emoji: '🏹' },
+    { word: 'fan', definition: 'It keeps you cool', emoji: '🪭' },
+    { word: 'pan', definition: 'You cook food in it', emoji: '🍳' },
+    { word: 'can', definition: 'A metal container for food', emoji: '🥫' },
+    { word: 'jar', definition: 'A glass container with a lid', emoji: '🫙' },
+    { word: 'bag', definition: 'You carry things in it', emoji: '👜' },
+    { word: 'box', definition: 'A square container', emoji: '📦' },
   ],
   medium: [
     { word: 'elephant', definition: 'The largest land animal with a trunk', emoji: '🐘' },
@@ -44,6 +80,46 @@ const vocabularyData = {
     { word: 'airplane', definition: 'A vehicle that flies in the sky', emoji: '✈️' },
     { word: 'dinosaur', definition: 'A large animal that lived long ago', emoji: '🦕' },
     { word: 'umbrella', definition: 'You use it to stay dry in rain', emoji: '☂️' },
+    { word: 'library', definition: 'A place where you borrow books', emoji: '📚' },
+    { word: 'playground', definition: 'A place where children play outside', emoji: '🎪' },
+    { word: 'bakery', definition: 'A place where bread and cakes are made', emoji: '🥖' },
+    { word: 'aquarium', definition: 'A place where you see fish and sea animals', emoji: '🐠' },
+    { word: 'carnival', definition: 'A fun event with rides and games', emoji: '🎡' },
+    { word: 'dinosaur', definition: 'A reptile that lived millions of years ago', emoji: '🦖' },
+    { word: 'chocolate', definition: 'A sweet brown treat made from cocoa', emoji: '🍫' },
+    { word: 'strawberry', definition: 'A small red fruit with seeds on the outside', emoji: '🍓' },
+    { word: 'pineapple', definition: 'A tropical fruit with a spiky crown', emoji: '🍍' },
+    { word: 'watermelon', definition: 'A large green fruit with red inside', emoji: '🍉' },
+    { word: 'adventure', definition: 'An exciting journey or experience', emoji: '🗺️' },
+    { word: 'birthday', definition: 'The day you were born, celebrated each year', emoji: '🎂' },
+    { word: 'champion', definition: 'A person who wins first place', emoji: '🏆' },
+    { word: 'dangerous', definition: 'Something that could hurt you', emoji: '⚠️' },
+    { word: 'exercise', definition: 'Moving your body to stay healthy', emoji: '🏃' },
+    { word: 'favorite', definition: 'The one you like the most', emoji: '⭐' },
+    { word: 'festival', definition: 'A special celebration or event', emoji: '🎪' },
+    { word: 'furniture', definition: 'Things like tables, chairs, and beds', emoji: '🪑' },
+    { word: 'graduation', definition: 'A ceremony when you finish school', emoji: '🎓' },
+    { word: 'hamburger', definition: 'A sandwich with a meat patty', emoji: '🍔' },
+    { word: 'important', definition: 'Something that matters a lot', emoji: '❗' },
+    { word: 'invisible', definition: 'Something you cannot see', emoji: '👻' },
+    { word: 'jellyfish', definition: 'A sea animal with tentacles', emoji: '🪼' },
+    { word: 'kangaroo', definition: 'An animal that hops and has a pouch', emoji: '🦘' },
+    { word: 'landscape', definition: 'What you see when you look at land', emoji: '🏞️' },
+    { word: 'microscope', definition: 'A tool for looking at tiny things', emoji: '🔬' },
+    { word: 'newspaper', definition: 'A paper with news stories', emoji: '📰' },
+    { word: 'parachute', definition: 'A big cloth that slows a fall', emoji: '🪂' },
+    { word: 'rectangle', definition: 'A shape with four sides and four corners', emoji: '▬' },
+    { word: 'sandwich', definition: 'Food between two pieces of bread', emoji: '🥪' },
+    { word: 'telescope', definition: 'A tool for looking at stars', emoji: '🔭' },
+    { word: 'tournament', definition: 'A series of games to find a winner', emoji: '🏅' },
+    { word: 'umbrella', definition: 'Keeps you dry in the rain', emoji: '☂️' },
+    { word: 'vegetable', definition: 'A healthy food that grows in the ground', emoji: '🥦' },
+    { word: 'xylophone', definition: 'A musical instrument with metal bars', emoji: '🎵' },
+    { word: 'yesterday', definition: 'The day before today', emoji: '📅' },
+    { word: 'zucchini', definition: 'A long green vegetable', emoji: '🥒' },
+    { word: 'alligator', definition: 'A large reptile that lives in swamps', emoji: '🐊' },
+    { word: 'bouquet', definition: 'A bunch of flowers', emoji: '💐' },
+    { word: 'calendar', definition: 'Shows the days, weeks, and months', emoji: '📅' },
   ],
   hard: [
     { word: 'magnificent', definition: 'Extremely beautiful or impressive', emoji: '✨' },
@@ -56,6 +132,48 @@ const vocabularyData = {
     { word: 'neighborhood', definition: 'The area where you live nearby', emoji: '🏘️' },
     { word: 'encyclopedia', definition: 'A book full of facts about many things', emoji: '📚' },
     { word: 'microscope', definition: 'An instrument for looking at tiny things', emoji: '🔬' },
+    { word: 'archaeologist', definition: 'A person who studies ancient things', emoji: '🏺' },
+    { word: 'biodiversity', definition: 'The variety of living things in an area', emoji: '🌿' },
+    { word: 'constellation', definition: 'A group of stars that form a pattern', emoji: '⭐' },
+    { word: 'democracy', definition: 'A system where people vote for leaders', emoji: '🗳️' },
+    { word: 'ecosystem', definition: 'Living things and their environment together', emoji: '🌍' },
+    { word: 'fahrenheit', definition: 'A scale for measuring temperature', emoji: '🌡️' },
+    { word: 'hibernation', definition: 'When animals sleep through winter', emoji: '🐻' },
+    { word: 'imagination', definition: 'The ability to create pictures in your mind', emoji: '💭' },
+    { word: 'jurisdiction', definition: 'The area where someone has authority', emoji: '⚖️' },
+    { word: 'kaleidoscope', definition: 'A tube that shows colorful patterns', emoji: '🔭' },
+    { word: 'laboratory', definition: 'A place where scientists do experiments', emoji: '🔬' },
+    { word: 'metamorphosis', definition: 'A big change in form, like caterpillar to butterfly', emoji: '🦋' },
+    { word: 'navigation', definition: 'Finding your way from one place to another', emoji: '🧭' },
+    { word: 'observatory', definition: 'A building for studying stars', emoji: '🔭' },
+    { word: 'photosynthesis', definition: 'How plants make food from sunlight', emoji: '🌱' },
+    { word: 'quadrilateral', definition: 'A shape with four sides', emoji: '📐' },
+    { word: 'resurrection', definition: 'Coming back to life', emoji: '🌅' },
+    { word: 'stratosphere', definition: 'A layer of Earth\'s atmosphere', emoji: '🌍' },
+    { word: 'thermometer', definition: 'An instrument for measuring temperature', emoji: '🌡️' },
+    { word: 'university', definition: 'A place for higher education', emoji: '🎓' },
+    { word: 'vocabulary', definition: 'All the words a person knows', emoji: '📖' },
+    { word: 'wingspan', definition: 'The distance from one wing tip to the other', emoji: '🦅' },
+    { word: 'xenophobia', definition: 'Fear of strangers or foreigners', emoji: '😨' },
+    { word: 'zoologist', definition: 'A person who studies animals', emoji: '🐾' },
+    { word: 'abbreviation', definition: 'A shortened form of a word', emoji: '📝' },
+    { word: 'beneficial', definition: 'Something that helps or is good for you', emoji: '✅' },
+    { word: 'catastrophe', definition: 'A terrible event or disaster', emoji: '💥' },
+    { word: 'deteriorate', definition: 'To get worse over time', emoji: '📉' },
+    { word: 'exaggerate', definition: 'To make something seem more than it is', emoji: '📈' },
+    { word: 'flourishing', definition: 'Growing or doing very well', emoji: '🌸' },
+    { word: 'geological', definition: 'Related to the study of rocks and Earth', emoji: '🪨' },
+    { word: 'hypothesis', definition: 'An idea that can be tested', emoji: '💡' },
+    { word: 'independent', definition: 'Not needing help from others', emoji: '🗽' },
+    { word: 'juxtapose', definition: 'To put two things side by side', emoji: '↔️' },
+    { word: 'kindergarten', definition: 'The first year of school for young children', emoji: '🏫' },
+    { word: 'lieutenant', definition: 'A military officer rank', emoji: '🎖️' },
+    { word: 'maintenance', definition: 'Keeping something in good condition', emoji: '🔧' },
+    { word: 'necessary', definition: 'Something that is needed', emoji: '❗' },
+    { word: 'occurrence', definition: 'Something that happens', emoji: '📌' },
+    { word: 'perseverance', definition: 'Keep trying even when it is hard', emoji: '💪' },
+    { word: 'questionnaire', definition: 'A list of questions to answer', emoji: '📋' },
+    { word: 'restaurant', definition: 'A place where you eat meals', emoji: '🍽️' },
   ],
 }
 
@@ -74,6 +192,44 @@ const spellingData = {
     { correct: 'father', wrongs: ['fathr', 'fathar', 'fathor'] },
     { correct: 'sister', wrongs: ['sistr', 'sistur', 'cister'] },
     { correct: 'brother', wrongs: ['brothr', 'bruther', 'brothar'] },
+    { correct: 'table', wrongs: ['tabel', 'tabl', 'tble'] },
+    { correct: 'chair', wrongs: ['chare', 'chiar', 'chir'] },
+    { correct: 'pencil', wrongs: ['pensil', 'pencel', 'pincil'] },
+    { correct: 'paper', wrongs: ['papur', 'papper', 'papor'] },
+    { correct: 'window', wrongs: ['windo', 'windoe', 'windaow'] },
+    { correct: 'garden', wrongs: ['gardan', 'gardin', 'gardon'] },
+    { correct: 'monkey', wrongs: ['munkey', 'monky', 'monkee'] },
+    { correct: 'rabbit', wrongs: ['rabit', 'rabbet', 'rabitt'] },
+    { correct: 'yellow', wrongs: ['yelo', 'yello', 'yeloe'] },
+    { correct: 'orange', wrongs: ['orng', 'orenge', 'orang'] },
+    { correct: 'purple', wrongs: ['purpel', 'puple', 'perple'] },
+    { correct: 'green', wrongs: ['grene', 'grean', 'grin'] },
+    { correct: 'brown', wrongs: ['browne', 'broun', 'brwon'] },
+    { correct: 'black', wrongs: ['blak', 'blac', 'blck'] },
+    { correct: 'white', wrongs: ['wite', 'whit', 'whie'] },
+    { correct: 'monkey', wrongs: ['munkey', 'monky', 'monkee'] },
+    { correct: 'tiger', wrongs: ['tigor', 'tyger', 'tigr'] },
+    { correct: 'horse', wrongs: ['hors', 'hourse', 'hoarse'] },
+    { correct: 'sheep', wrongs: ['shep', 'sheap', 'shiep'] },
+    { correct: 'mouse', wrongs: ['mous', 'moose', 'mouce'] },
+    { correct: 'spider', wrongs: ['spidor', 'spyder', 'spidr'] },
+    { correct: 'turtle', wrongs: ['turtel', 'turtl', 'tortle'] },
+    { correct: 'dinner', wrongs: ['diner', 'dinr', 'dinnr'] },
+    { correct: 'breakfast', wrongs: ['brekfast', 'brekfust', 'brakfast'] },
+    { correct: 'morning', wrongs: ['mornin', 'moring', 'mourning'] },
+    { correct: 'evening', wrongs: ['evning', 'evenin', 'eveening'] },
+    { correct: 'Sunday', wrongs: ['Sundy', 'Sundae', 'Sundey'] },
+    { correct: 'Monday', wrongs: ['Munday', 'Mondey', 'Mondy'] },
+    { correct: 'summer', wrongs: ['sumer', 'summr', 'summor'] },
+    { correct: 'winter', wrongs: ['wintor', 'wintr', 'wintur'] },
+    { correct: 'spring', wrongs: ['sprng', 'springe', 'sprig'] },
+    { correct: 'autumn', wrongs: ['autum', 'autun', 'aughtumn'] },
+    { correct: 'belly', wrongs: ['belley', 'bellie', 'beli'] },
+    { correct: 'finger', wrongs: ['fingor', 'fingr', 'fingeer'] },
+    { correct: 'elbow', wrongs: ['elbo', 'elbw', 'elbrow'] },
+    { correct: 'knee', wrongs: ['ne', 'kne', 'kneee'] },
+    { correct: 'shoulder', wrongs: ['sholder', 'shoulde', 'shouldr'] },
+    { correct: 'stomach', wrongs: ['stomak', 'stumach', 'stommach'] },
   ],
   medium: [
     { correct: 'beautiful', wrongs: ['beautful', 'beutiful', 'beatiful'] },
@@ -81,72 +237,271 @@ const spellingData = {
     { correct: 'chocolate', wrongs: ['choclate', 'chocolat', 'choclet'] },
     { correct: 'elephant', wrongs: ['elefant', 'elaphant', 'elephent'] },
     { correct: 'favorite', wrongs: ['favrite', 'favourite', 'favorit'] },
-    { correct: 'garden', wrongs: ['gardan', 'gardin', 'gardon'] },
     { correct: 'holiday', wrongs: ['holaday', 'holliday', 'holidey'] },
     { correct: 'mountain', wrongs: ['mountin', 'moutain', 'mountan'] },
     { correct: 'rainbow', wrongs: ['rainbo', 'rainbrow', 'ranbow'] },
     { correct: 'tomorrow', wrongs: ['tommorow', 'tomorow', 'tomorow'] },
+    { correct: 'airplane', wrongs: ['airplain', 'airplne', 'aeroplane'] },
+    { correct: 'basketball', wrongs: ['basketbal', 'basktball', 'bascketball'] },
+    { correct: 'butterfly', wrongs: ['butterflie', 'buterfly', 'butterfli'] },
+    { correct: 'chicken', wrongs: ['chiken', 'chickin', 'chiken'] },
+    { correct: 'dinosaur', wrongs: ['dinasour', 'dinosor', 'dinossaur'] },
+    { correct: 'eleven', wrongs: ['elven', 'elevn', 'elleven'] },
+    { correct: 'family', wrongs: ['famly', 'familey', 'famili'] },
+    { correct: 'giraffe', wrongs: ['girafe', 'girraf', 'giraph'] },
+    { correct: 'hamburger', wrongs: ['hamburgur', 'hamburgr', 'hamberder'] },
+    { correct: 'important', wrongs: ['importnt', 'imortant', 'importent'] },
+    { correct: 'jellyfish', wrongs: ['jellyfsh', 'jeliefish', 'jellyfich'] },
+    { correct: 'kangaroo', wrongs: ['kangroo', 'kangarou', 'kangeru'] },
+    { correct: 'language', wrongs: ['languege', 'languge', 'langauge'] },
+    { correct: 'mushroom', wrongs: ['mushrom', 'mushrume', 'mushrome'] },
+    { correct: 'newspaper', wrongs: ['newpaper', 'news paper', 'newzpaper'] },
+    { correct: 'octopus', wrongs: ['octopuss', 'octopis', 'octapuss'] },
+    { correct: 'penguin', wrongs: ['penguen', 'pengwin', 'penquin'] },
+    { correct: 'question', wrongs: ['queshion', 'queston', 'questin'] },
+    { correct: 'sandwich', wrongs: ['sandwitch', 'sandwhich', 'sandwiche'] },
+    { correct: 'telescope', wrongs: ['telescop', 'tellescope', 'telescoap'] },
+    { correct: 'umbrella', wrongs: ['umberella', 'umbrela', 'umberla'] },
+    { correct: 'vegetable', wrongs: ['vegitable', 'vegtable', 'vegitabel'] },
+    { correct: 'Wednesday', wrongs: ['Wendsday', 'Wednsday', 'Wensday'] },
+    { correct: 'xylophone', wrongs: ['xilophone', 'xylofon', 'zilophone'] },
+    { correct: 'yesterday', wrongs: ['yesturday', 'yestaday', 'yestarday'] },
+    { correct: 'zucchini', wrongs: ['zuccini', 'zuchini', 'zukini'] },
+    { correct: 'alligator', wrongs: ['aligator', 'alligater', 'aligater'] },
+    { correct: 'bouquet', wrongs: ['boquet', 'bouqet', 'bouque'] },
+    { correct: 'calendar', wrongs: ['calender', 'calander', 'calendor'] },
+    { correct: 'daffodil', wrongs: ['daffodill', 'daffidil', 'dafodil'] },
+    { correct: 'exercise', wrongs: ['exercize', 'excercise', 'exersize'] },
+    { correct: 'February', wrongs: ['Febuary', 'Feburary', 'Febraury'] },
+    { correct: 'grateful', wrongs: ['greatful', 'gratefull', 'gratful'] },
+    { correct: 'hygiene', wrongs: ['hygeine', 'hygine', 'hygene'] },
+    { correct: 'imaginary', wrongs: ['imaginery', 'imaginery', 'imageneary'] },
+    { correct: 'jewelry', wrongs: ['jewelery', 'jewellry', 'jewlery'] },
+    { correct: 'kindergarten', wrongs: ['kindergarden', 'kindergarton', 'kindergaten'] },
+    { correct: 'lavender', wrongs: ['lavendar', 'lavander', 'lavendr'] },
+    { correct: 'medicine', wrongs: ['medecine', 'medicin', 'medisine'] },
+    { correct: 'necessary', wrongs: ['neccessary', 'necesary', 'neccesary'] },
+    { correct: 'occasion', wrongs: ['ocassion', 'occation', 'occazion'] },
+    { correct: 'parallel', wrongs: ['paralel', 'paralell', 'parrallel'] },
   ],
   hard: [
-    { correct: 'necessary', wrongs: ['neccessary', 'necesary', 'neccesary'] },
     { correct: 'restaurant', wrongs: ['restarant', 'restraunt', 'resturant'] },
-    { correct: 'Wednesday', wrongs: ['Wendsday', 'Wednsday', 'Wensday'] },
-    { correct: 'February', wrongs: ['Febuary', 'Feburary', 'Febraury'] },
     { correct: 'bicycle', wrongs: ['bysicle', 'bicicle', 'bycicle'] },
-    { correct: 'chocolate', wrongs: ['choclate', 'chocolat', 'chocholate'] },
     { correct: 'dangerous', wrongs: ['dangrous', 'dangeorus', 'dangereous'] },
     { correct: 'different', wrongs: ['diffrent', 'diferent', 'diffrent'] },
-    { correct: 'favorite', wrongs: ['favrite', 'favourit', 'favorit'] },
     { correct: 'immediately', wrongs: ['imediately', 'immedietly', 'immeditely'] },
+    { correct: 'accommodate', wrongs: ['accomodate', 'acommodate', 'accomadate'] },
+    { correct: 'acknowledge', wrongs: ['aknowledge', 'acknowlege', 'acknolege'] },
+    { correct: 'acquaintance', wrongs: ['aquaintance', 'acquantance', 'aquaintence'] },
+    { correct: 'apparently', wrongs: ['apparantly', 'apparely', 'aparently'] },
+    { correct: 'beginning', wrongs: ['begining', 'beggining', 'beginng'] },
+    { correct: 'believe', wrongs: ['beleive', 'belive', 'beleve'] },
+    { correct: 'business', wrongs: ['buisness', 'busness', 'bussiness'] },
+    { correct: 'category', wrongs: ['catagory', 'categroy', 'catigory'] },
+    { correct: 'changeable', wrongs: ['changable', 'changeabel', 'chanjeable'] },
+    { correct: 'committed', wrongs: ['comitted', 'commited', 'comited'] },
+    { correct: 'conscience', wrongs: ['concience', 'consciense', 'conshence'] },
+    { correct: 'convenient', wrongs: ['conveinient', 'convienient', 'convient'] },
+    { correct: 'correspondence', wrongs: ['correspondance', 'corespondence', 'corrispondence'] },
+    { correct: 'decide', wrongs: ['descide', 'decied', 'desside'] },
+    { correct: 'definitely', wrongs: ['definately', 'definetly', 'definitly'] },
+    { correct: 'disappear', wrongs: ['dissapear', 'disapear', 'dissappear'] },
+    { correct: 'embarrass', wrongs: ['embarass', 'embarras', 'imbarass'] },
+    { correct: 'environment', wrongs: ['enviroment', 'envirment', 'envirement'] },
+    { correct: 'exaggerate', wrongs: ['exagerate', 'exagerrate', 'exigerrate'] },
+    { correct: 'existence', wrongs: ['existense', 'existance', 'existanse'] },
+    { correct: 'experience', wrongs: ['experiance', 'experence', 'expierence'] },
+    { correct: 'explanation', wrongs: ['explaination', 'explenation', 'explantion'] },
+    { correct: 'fascinate', wrongs: ['fascinate', 'fascinate', 'fassinate'] },
+    { correct: 'fluorescent', wrongs: ['florescent', 'flourescent', 'flourecent'] },
+    { correct: 'foreseeable', wrongs: ['forseeable', 'foresable', 'forseeble'] },
+    { correct: 'guarantee', wrongs: ['garantee', 'gaurantee', 'guarentee'] },
+    { correct: 'harrass', wrongs: ['harass', 'harras', 'harrasss'] },
+    { correct: 'ignorance', wrongs: ['ignoronce', 'ignorence', 'ignoranse'] },
+    { correct: 'independent', wrongs: ['independant', 'indipendent', 'independint'] },
+    { correct: 'intelligence', wrongs: ['inteligence', 'intellegence', 'intelligense'] },
+    { correct: 'jewellery', wrongs: ['jewelery', 'jewlery', 'jewellry'] },
+    { correct: 'judgment', wrongs: ['judgement', 'judgemnt', 'jugdment'] },
+    { correct: 'knowledge', wrongs: ['knowlege', 'knolage', 'knowladge'] },
+    { correct: 'lieutenant', wrongs: ['leftenant', 'leutenant', 'lutenant'] },
+    { correct: 'maintenance', wrongs: ['maintainance', 'maintnance', 'maintenence'] },
+    { correct: 'maneuver', wrongs: ['manoeuver', 'manuver', 'manouvre'] },
+    { correct: 'medieval', wrongs: ['medeval', 'midieval', 'medeival'] },
+    { correct: 'misspell', wrongs: ['mispell', 'misspel', 'misspeel'] },
+    { correct: 'neighbor', wrongs: ['neighbour', 'nabor', 'neigbor'] },
+    { correct: 'occurrence', wrongs: ['occurence', 'occurrance', 'occurence'] },
+    { correct: 'pavilion', wrongs: ['pavillion', 'pavalion', 'pavillion'] },
+    { correct: 'perseverance', wrongs: ['perseverence', 'perserverance', 'persevrence'] },
+    { correct: 'possession', wrongs: ['posession', 'possesion', 'possition'] },
+    { correct: 'privilege', wrongs: ['privelege', 'privelage', 'priviledge'] },
+    { correct: 'pronunciation', wrongs: ['pronounciation', 'pronounciation', 'pronuncation'] },
+    { correct: 'questionnaire', wrongs: ['questionaire', 'questionair', 'questonnaire'] },
+    { correct: 'recommend', wrongs: ['recomend', 'recomand', 'reccommend'] },
+    { correct: 'reference', wrongs: ['referance', 'refrence', 'reffrence'] },
+    { correct: 'relevant', wrongs: ['relavent', 'relevnt', 'relivent'] },
+    { correct: 'separate', wrongs: ['seperate', 'seprate', 'separete'] },
+    { correct: 'sufficient', wrongs: ['sufficent', 'suficient', 'sufficiant'] },
+    { correct: 'surprise', wrongs: ['suprise', 'surprize', 'surpise'] },
+    { correct: 'tendency', wrongs: ['tendancy', 'tendensy', 'tendancy'] },
+    { correct: 'threshold', wrongs: ['threshhold', 'treshold', 'threshould'] },
+    { correct: 'tomorrow', wrongs: ['tommorow', 'tomorow', 'tommorrow'] },
+    { correct: 'unfortunately', wrongs: ['unfortunatly', 'unfortunatley', 'unfortunetly'] },
+    { correct: 'veterinarian', wrongs: ['veternarian', 'vetrinarian', 'vetinarian'] },
+    { correct: 'weird', wrongs: ['wierd', 'weired', 'weard'] },
   ],
 }
 
 // Alphabet Generator
-export function generateAlphabet(difficulty, lang) {
-  const idx = Math.floor(Math.random() * 26)
-  const letter = alphabet[idx]
+// Words for "what letter does this start/end with" questions
+const alphabetWords = {
+  easy: [
+    { word: 'Apple', letter: 'A' }, { word: 'Ball', letter: 'B' }, { word: 'Cat', letter: 'C' },
+    { word: 'Dog', letter: 'D' }, { word: 'Egg', letter: 'E' }, { word: 'Fish', letter: 'F' },
+    { word: 'Girl', letter: 'G' }, { word: 'Hat', letter: 'H' }, { word: 'Ice', letter: 'I' },
+    { word: 'Jump', letter: 'J' }, { word: 'Kite', letter: 'K' }, { word: 'Lion', letter: 'L' },
+    { word: 'Moon', letter: 'M' }, { word: 'Nest', letter: 'N' }, { word: 'Orange', letter: 'O' },
+    { word: 'Pig', letter: 'P' }, { word: 'Queen', letter: 'Q' }, { word: 'Rain', letter: 'R' },
+    { word: 'Sun', letter: 'S' }, { word: 'Tree', letter: 'T' }, { word: 'Umbrella', letter: 'U' },
+    { word: 'Violin', letter: 'V' }, { word: 'Whale', letter: 'W' }, { word: 'Xylophone', letter: 'X' },
+    { word: 'Yarn', letter: 'Y' }, { word: 'Zoo', letter: 'Z' },
+    { word: 'Banana', letter: 'B' }, { word: 'Carrot', letter: 'C' }, { word: 'Duck', letter: 'D' },
+    { word: 'Elephant', letter: 'E' }, { word: 'Flower', letter: 'F' }, { word: 'Grapes', letter: 'G' },
+    { word: 'House', letter: 'H' }, { word: 'Island', letter: 'I' }, { word: 'Juice', letter: 'J' },
+    { word: 'Key', letter: 'K' }, { word: 'Lamp', letter: 'L' }, { word: 'Mouse', letter: 'M' },
+    { word: 'Nut', letter: 'N' }, { word: 'Owl', letter: 'O' }, { word: 'Pencil', letter: 'P' },
+    { word: 'Quilt', letter: 'Q' }, { word: 'Ring', letter: 'R' }, { word: 'Star', letter: 'S' },
+    { word: 'Tiger', letter: 'T' }, { word: 'Unicorn', letter: 'U' }, { word: 'Vase', letter: 'V' },
+    { word: 'Window', letter: 'W' }, { word: 'Fox', letter: 'F' }, { word: 'Yak', letter: 'Y' },
+    { word: 'Zebra', letter: 'Z' },
+  ],
+  medium: [
+    { word: 'Apple', letter: 'A' }, { word: 'Bird', letter: 'B' }, { word: 'Cloud', letter: 'C' },
+    { word: 'Dream', letter: 'D' }, { word: 'Earth', letter: 'E' }, { word: 'Fire', letter: 'F' },
+    { word: 'Garden', letter: 'G' }, { word: 'Heart', letter: 'H' }, { word: 'Ice cream', letter: 'I' },
+    { word: 'Jungle', letter: 'J' }, { word: 'Kitchen', letter: 'K' }, { word: 'Library', letter: 'L' },
+    { word: 'Mountain', letter: 'M' }, { word: 'Night', letter: 'N' }, { word: 'Ocean', letter: 'O' },
+    { word: 'Planet', letter: 'P' }, { word: 'Question', letter: 'Q' }, { word: 'River', letter: 'R' },
+    { word: 'Storm', letter: 'S' }, { word: 'Thunder', letter: 'T' }, { word: 'Universe', letter: 'U' },
+    { word: 'Valley', letter: 'V' }, { word: 'Winter', letter: 'W' }, { word: 'Yellow', letter: 'Y' },
+    { word: 'Breakfast', letter: 'B' }, { word: 'Champion', letter: 'C' }, { word: 'Dolphin', letter: 'D' },
+    { word: 'Elephant', letter: 'E' }, { word: 'Festival', letter: 'F' }, { word: 'Giraffe', letter: 'G' },
+    { word: 'Honey', letter: 'H' }, { word: 'Insect', letter: 'I' }, { word: 'Jellyfish', letter: 'J' },
+    { word: 'Kangaroo', letter: 'K' }, { word: 'Lemonade', letter: 'L' }, { word: 'Mushroom', letter: 'M' },
+    { word: 'Notebook', letter: 'N' }, { word: 'Pumpkin', letter: 'P' }, { word: 'Rainbow', letter: 'R' },
+    { word: 'Sandwich', letter: 'S' }, { word: 'Triangle', letter: 'T' }, { word: 'Vacation', letter: 'V' },
+    { word: 'Waterfall', letter: 'W' }, { word: 'Balloon', letter: 'B' }, { word: 'Chocolate', letter: 'C' },
+    { word: 'Dragon', letter: 'D' }, { word: 'Envelope', letter: 'E' }, { word: 'Fountain', letter: 'F' },
+    { word: 'Glacier', letter: 'G' }, { word: 'Helicopter', letter: 'H' },
+  ],
+  hard: [
+    { word: 'Astronaut', letter: 'A' }, { word: 'Basketball', letter: 'B' }, { word: 'Crocodile', letter: 'C' },
+    { word: 'Detective', letter: 'D' }, { word: 'Education', letter: 'E' }, { word: 'Furniture', letter: 'F' },
+    { word: 'Geography', letter: 'G' }, { word: 'Hippopotamus', letter: 'H' }, { word: 'Instrument', letter: 'I' },
+    { word: 'Jellyfish', letter: 'J' }, { word: 'Kindergarten', letter: 'K' }, { word: 'Landscape', letter: 'L' },
+    { word: 'Microscope', letter: 'M' }, { word: 'Navigation', letter: 'N' }, { word: 'Observatory', letter: 'O' },
+    { word: 'Parachute', letter: 'P' }, { word: 'Quarterback', letter: 'Q' }, { word: 'Restaurant', letter: 'R' },
+    { word: 'Strawberry', letter: 'S' }, { word: 'Telescope', letter: 'T' }, { word: 'Umbrella', letter: 'U' },
+    { word: 'Veterinarian', letter: 'V' }, { word: 'Watermelon', letter: 'W' }, { word: 'Xylophone', letter: 'X' },
+    { word: 'Yesterday', letter: 'Y' }, { word: 'Zucchini', letter: 'Z' },
+    { word: 'Archaeologist', letter: 'A' }, { word: 'Butterfly', letter: 'B' }, { word: 'Chandelier', letter: 'C' },
+    { word: 'Daffodil', letter: 'D' }, { word: 'Encyclopedia', letter: 'E' }, { word: 'Flamingo', letter: 'F' },
+    { word: 'Grasshopper', letter: 'G' }, { word: 'Hedgehog', letter: 'H' }, { word: 'Iguana', letter: 'I' },
+    { word: 'Juggernaut', letter: 'J' }, { word: 'Kaleidoscope', letter: 'K' }, { word: 'Laboratory', letter: 'L' },
+    { word: 'Manuscript', letter: 'M' }, { word: 'Nightmare', letter: 'N' }, { word: 'Origami', letter: 'O' },
+    { word: 'Photosynthesis', letter: 'P' }, { word: 'Questionnaire', letter: 'Q' }, { word: 'Rhinoceros', letter: 'R' },
+    { word: 'Saxophone', letter: 'S' }, { word: 'Thermometer', letter: 'T' }, { word: 'Unicorn', letter: 'U' },
+    { word: 'Vocabulary', letter: 'V' }, { word: 'Windshield', letter: 'W' }, { word: 'Xenophobia', letter: 'X' },
+    { word: 'Yachtsman', letter: 'Y' }, { word: 'Zeppelin', letter: 'Z' },
+  ],
+}
 
-  let questionText, questionSpeech, correct, wrongs
+export function generateAlphabet(difficulty, lang) {
+  const questionType = Math.random()
+
+  let questionText, questionSpeech, correct, wrongs, dedupeKey
 
   if (difficulty === 'easy') {
-    // What comes after X?
-    const nextLetter = idx < 25 ? alphabet[idx + 1] : 'A'
-    correct = nextLetter
-    wrongs = shuffle(alphabet.filter(l => l !== nextLetter)).slice(0, 3)
-
-    questionText = lang === 'fil'
-      ? `Ano ang kasunod ng ${letter}?`
-      : `What comes after ${letter}?`
-    questionSpeech = questionText
+    if (questionType < 0.5) {
+      // What comes after X?
+      const idx = Math.floor(Math.random() * 26)
+      const letter = alphabet[idx]
+      const nextLetter = idx < 25 ? alphabet[idx + 1] : 'A'
+      correct = nextLetter
+      wrongs = shuffle(alphabet.filter(l => l !== nextLetter)).slice(0, 3)
+      questionText = lang === 'fil'
+        ? `Ano ang kasunod ng ${letter}?`
+        : `What comes after ${letter}?`
+      questionSpeech = questionText
+      dedupeKey = `alpha-after-${letter}`
+    } else {
+      // What letter does [word] start with?
+      const item = randItem(alphabetWords.easy)
+      correct = item.letter
+      wrongs = shuffle(alphabet.filter(l => l !== item.letter)).slice(0, 3)
+      questionText = lang === 'fil'
+        ? `Anong letra ang nagsisimula ang salitang "${item.word}"?`
+        : `What letter does "${item.word}" start with?`
+      questionSpeech = questionText
+      dedupeKey = `alpha-start-${item.word}`
+    }
   } else if (difficulty === 'medium') {
-    // What comes before X?
-    const prevLetter = idx > 0 ? alphabet[idx - 1] : 'Z'
-    correct = prevLetter
-    wrongs = shuffle(alphabet.filter(l => l !== prevLetter)).slice(0, 3)
-
-    questionText = lang === 'fil'
-      ? `Ano ang bago ng ${letter}?`
-      : `What comes before ${letter}?`
-    questionSpeech = questionText
+    if (questionType < 0.5) {
+      // What comes before X?
+      const idx = Math.floor(Math.random() * 26)
+      const letter = alphabet[idx]
+      const prevLetter = idx > 0 ? alphabet[idx - 1] : 'Z'
+      correct = prevLetter
+      wrongs = shuffle(alphabet.filter(l => l !== prevLetter)).slice(0, 3)
+      questionText = lang === 'fil'
+        ? `Ano ang bago ng ${letter}?`
+        : `What comes before ${letter}?`
+      questionSpeech = questionText
+      dedupeKey = `alpha-before-${letter}`
+    } else {
+      // What letter does [word] start with?
+      const item = randItem(alphabetWords.medium)
+      correct = item.letter
+      wrongs = shuffle(alphabet.filter(l => l !== item.letter)).slice(0, 3)
+      questionText = lang === 'fil'
+        ? `Anong letra ang nagsisimula ang salitang "${item.word}"?`
+        : `What letter does "${item.word}" start with?`
+      questionSpeech = questionText
+      dedupeKey = `alpha-start-${item.word}`
+    }
   } else {
-    // What is the Xth letter?
-    correct = letter
-    wrongs = shuffle(alphabet.filter(l => l !== letter)).slice(0, 3)
-
-    const ordinal = idx + 1
-    questionText = lang === 'fil'
-      ? `Ano ang ika-${ordinal} na letra?`
-      : `What is the ${ordinal}${ordinal === 1 ? 'st' : ordinal === 2 ? 'nd' : ordinal === 3 ? 'rd' : 'th'} letter of the alphabet?`
-    questionSpeech = questionText
+    if (questionType < 0.5) {
+      // What is the Xth letter?
+      const idx = Math.floor(Math.random() * 26)
+      const letter = alphabet[idx]
+      correct = letter
+      wrongs = shuffle(alphabet.filter(l => l !== letter)).slice(0, 3)
+      const ordinal = idx + 1
+      questionText = lang === 'fil'
+        ? `Ano ang ika-${ordinal} na letra?`
+        : `What is the ${ordinal}${ordinal === 1 ? 'st' : ordinal === 2 ? 'nd' : ordinal === 3 ? 'rd' : 'th'} letter of the alphabet?`
+      questionSpeech = questionText
+      dedupeKey = `alpha-ordinal-${ordinal}`
+    } else {
+      // What letter does [word] start with?
+      const item = randItem(alphabetWords.hard)
+      correct = item.letter
+      wrongs = shuffle(alphabet.filter(l => l !== item.letter)).slice(0, 3)
+      questionText = lang === 'fil'
+        ? `Anong letra ang nagsisimula ang salitang "${item.word}"?`
+        : `What letter does "${item.word}" start with?`
+      questionSpeech = questionText
+      dedupeKey = `alpha-start-${item.word}`
+    }
   }
 
   const labels = ['A', 'B', 'C', 'D']
   const options = shuffle([correct, ...wrongs])
 
   return {
-    id: `alpha-${letter}-${Date.now()}`,
+    id: `alpha-${Date.now()}-${Math.random()}`,
     text: questionText,
     speech: questionSpeech,
+    dedupeKey,
     choices: options.map((opt, i) => ({
       label: labels[i],
       text: opt,
@@ -176,6 +531,7 @@ export function generateVocabulary(difficulty, lang) {
     id: `vocab-${item.word}-${Date.now()}`,
     text: `${item.emoji} ${questionText}`,
     speech: questionText,
+    speech: questionText,
     choices: options.map((opt, i) => ({
       label: labels[i],
       text: opt,
@@ -203,6 +559,7 @@ export function generateSpelling(difficulty, lang) {
     id: `spell-${item.correct}-${Date.now()}`,
     text: questionText,
     speech: questionText,
+    dedupeKey: `spell-${item.correct}`,
     choices: allOptions.map((opt, i) => ({
       label: labels[i],
       text: opt,

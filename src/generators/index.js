@@ -34,9 +34,11 @@ export function generateQuestions(subject, topic, difficulty, count, lang = 'en'
     attempts++
     const question = generator(difficulty, lang)
 
-    if (seenTexts.has(question.text)) continue
+    // Use dedupeKey if available (for questions with same text but different content)
+    const key = question.dedupeKey || question.text
+    if (seenTexts.has(key)) continue
 
-    seenTexts.add(question.text)
+    seenTexts.add(key)
     questions.push(question)
   }
 
